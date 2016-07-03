@@ -1,0 +1,20 @@
+{
+  "name": "fcc-metadata",
+  "version": "1.0.0",
+  "description": "fcc-metadata",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyoZeus/fcc-metadata.git"
+  },
+  "author": "KyoZeus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KyoZeus/fcc-metadata/issues"
+  },
+  "homepage": "https://github.com/KyoZeus/fcc-metadata#readme"
+}
