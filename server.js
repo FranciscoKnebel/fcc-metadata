@@ -3,6 +3,8 @@ var multer  = require("multer");
 var app = express();
 
 app.use('/css', express.static(__dirname + '/client/css'));
+app.use('/js', express.static(__dirname + '/client/js'));
+
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/client/views/index.html');
@@ -14,14 +16,19 @@ app.get('/LICENSE', function (req, res) {
 
 
 /* File handling */
-var upload = multer({ dest: 'uploads/' });
+var upload = multer();
 
 app.post('/upload', upload.single('file'),  function(req, res, next) {
   console.log(req.file);
-  var fileInfo = parseNewFile(req.file);
+  if(req.file) {
+    var fileInfo = parseNewFile(req.file);
   
-  res.contentType('application/json');
-  res.send(fileInfo);
+    res.contentType('application/json');
+    res.send(fileInfo);
+  } else {
+    res.status(400).end();
+  }
+  
 });
 
 
