@@ -9,7 +9,7 @@
 </ul>
 
 ###### File response
-After the file upload, you will receive a JSON response, including the name, type, encoding and size of the file.
+After the file upload, you will receive a JSON response, including the name, type and size of the file.
 
 
 #### Demo
