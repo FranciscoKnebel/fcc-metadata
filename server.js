@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/LICENSE', function (req, res) {
-  res.sendFile(__dirname + 'LICENSE.md');
+  res.sendFile(__dirname + '/LICENSE.md');
 })
 
 
